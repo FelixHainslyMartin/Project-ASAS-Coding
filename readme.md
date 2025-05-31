@@ -39,7 +39,7 @@ bank_soal/
 #### 1. 🔃 Clone atau unduh proyek ini
 
 ```bash
-git clone https://github.com/namauser/bank-soal-matematika.git
+git clone https://github.com/FelixHainslyMartin/Project-ASAS-Coding
 cd Project-ASAS-Coding
 ```
 
