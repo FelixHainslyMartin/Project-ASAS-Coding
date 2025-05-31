@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="toolbar">
+    <a class="btn" href="{{ url_for('tambah') }}">+ Tambah Soal</a>
+    <form method="get" action="/">
+        <select name="tingkat" onchange="this.form.submit()">
+            <option value="">Semua</option>
+            <option value="Mudah">Mudah</option>
+            <option value="Sedang">Sedang</option>
+            <option value="Sulit">Sulit</option>
+        </select>
+    </form>
+</div>
+
+<ul class="soal-list">
+{% for soal in soals %}
+    <li class="soal-item">
+        <p><strong>{{ soal.pertanyaan }}</strong></p>
+        <p><em>Jawaban:</em> {{ soal.jawaban }} <span class="tag">{{ soal.tingkat }}</span></p>
+        <div class="actions">
+            <a href="{{ url_for('edit', id=soal.id) }}" class="btn-small">Edit</a>
+            <a href="{{ url_for('hapus', id=soal.id) }}" class="btn-small danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

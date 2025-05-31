@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ action }} Soal</h2>
+<form method="post" class="form-soal">
+    <label>Pertanyaan:</label>
+    <textarea name="pertanyaan" required>{{ soal.pertanyaan if soal else '' }}</textarea>
+
+    <label>Jawaban:</label>
+    <input type="text" name="jawaban" required value="{{ soal.jawaban if soal else '' }}">
+
+    <label>Tingkat:</label>
+    <select name="tingkat" required>
+        {% for tingkat in ['Mudah', 'Sedang', 'Sulit'] %}
+        <option value="{{ tingkat }}" {% if soal and soal.tingkat == tingkat %}selected{% endif %}>{{ tingkat }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit" class="btn">Simpan</button>
+</form>
+{% endblock %}
