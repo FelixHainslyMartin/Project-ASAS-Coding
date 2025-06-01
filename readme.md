@@ -85,4 +85,4 @@ Proyek ini cocok untuk:
 
 ---
 
-Made by Felix Hainsly Martin XI IPA 1
+-> Made by Felix Hainsly Martin XI IPA 1 <-
