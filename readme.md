@@ -84,3 +84,5 @@ Proyek ini cocok untuk:
 * Latihan pengembangan aplikasi MVC dengan Python
 
 ---
+
+Made by Felix Hainsly Martin XI IPA 1
